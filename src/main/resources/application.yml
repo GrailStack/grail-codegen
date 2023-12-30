@@ -1,0 +1,24 @@
+server:
+  port: 8082
+
+management:
+  port: 8085
+
+spring:
+  application:
+    name: grail-codegen
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-circular-references: true
+
+
+
+grail:
+  web:
+    resource-handlers: |
+      /css/**=classpath:/static/css/
+      /js/**=classpath:/static/js/
+      /favicon.ico=classpath:/static/favicon.ico
+      /index.html=classpath:/static/index.html

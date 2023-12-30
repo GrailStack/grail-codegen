@@ -1,0 +1,138 @@
+[
+  {
+    "dependencyModels": [
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "display": "Lombok",
+        "desc": "projectlombok",
+        "scope":"provided",
+        "version": "1.18.8"
+      }
+    ],
+    "modulekey": "parent"
+  },
+  {
+    "dependencyModels": [
+      {
+        "artifactId": "grail-cloud-starter-openfeign",
+        "classify": "Cloud",
+        "desc": "Grail基于Spring Cloud OpenFeign封装定制的OpenFeign",
+        "display": "Grail  OpenFeign",
+        "groupId": "com.itgrail.grail",
+        "optional": false
+      }
+    ],
+    "modulekey": "client"
+  },
+  {
+    "dependencyModels": [
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "desc": "projectlombok",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "display": "lombok",
+        "scope":"provided",
+        "version": "1.18.8"
+      }
+    ],
+    "modulekey": "app"
+  },
+  {
+    "dependencyModels": [
+      {
+        "artifactId": "grail-boot-starter-basic",
+        "classify": "DDD",
+        "desc": "Grail  Basic包含Grail  Framework中的CQRS,DDD,扩展点功能",
+        "display": "Grail  Basic",
+        "groupId": "com.itgrail.grail",
+        "optional": false
+      },
+      {
+        "artifactId": "grail-boot-starter-flow",
+        "classify": "Flow",
+        "desc": "Grail  Flow包含Grail  Framework中的流程编排",
+        "display": "Grail  Flow",
+        "groupId": "com.itgrail.grail",
+        "optional": true
+      },
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "desc": "projectlombok",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "display": "lombok",
+        "scope":"provided",
+        "version": "1.18.8"
+      }
+    ],
+    "modulekey": "domain"
+  },
+  {
+    "dependencyModels": [
+      {
+        "artifactId": "grail-boot-starter-mybatis",
+        "classify": "DB",
+        "desc": "Grail  Mybatis对Mybatis,Mybatis Plus进行定制扩展",
+        "display": "Grail  Mybatis",
+        "groupId": "com.itgrail.grail",
+        "optional": false
+      },
+      {
+        "artifactId": "grail-boot-starter-swagger",
+        "classify": "Tools",
+        "desc": "Grail  Swagger对Swagger进行定制扩展,实现开箱即用",
+        "display": "Grail  Swagger",
+        "groupId": "com.itgrail.grail",
+        "optional": true
+      },
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "desc": "projectlombok",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "display": "lombok",
+        "scope":"provided",
+        "version": "1.18.8"
+      }
+    ],
+    "modulekey": "infrastructure"
+  },
+  {
+    "dependencyModels": [
+      {
+        "artifactId": "grail-cloud-starter-nacos",
+        "classify": "注册中心",
+        "desc": "Grail  Nacos对Spring Cloud Alibaba中的Nacos进行扩展封装",
+        "display": "Grail  Nacos",
+        "groupId": "com.itgrail.grail",
+        "optional": true
+      },
+      {
+        "artifactId": "grail-cloud-starter-eureka",
+        "classify": "注册中心",
+        "desc": "Grail  Eureka对Eureka,Ribbon进行定制扩展",
+        "display": "Grail  Eureka",
+        "groupId": "com.itgrail.grail",
+        "optional": true
+      },
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "desc": "projectlombok",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "display": "lombok",
+        "scope":"provided",
+        "version": "1.18.8"
+      }
+    ],
+    "modulekey": "start"
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "dependencyModels": [
+      {
+        "artifactId": "grail-boot-starter-basic",
+        "classify": "DDD",
+        "desc": "Grail  Basic包含Grail  Framework中的CQRS,DDD,扩展点功能",
+        "groupId": "com.itgrail.grail",
+        "display": "Grail  Basic",
+        "optional": false
+      },
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "desc": "projectlombok",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "scope":"provided",
+        "display": "lombok",
+        "version": "1.18.8"
+      },
+      {
+        "artifactId": "grail-boot-starter-mybatis",
+        "classify": "DB",
+        "desc": "Grail  Mybatis对Mybatis,Mybatis Plus进行定制扩展",
+        "groupId": "com.itgrail.grail",
+        "display": "Grail  Mybatis",
+        "optional": true
+      },
+      {
+        "artifactId": "grail-boot-starter-swagger",
+        "classify": "Tools",
+        "desc": "Grail  Swagger对Swagger进行定制扩展,实现开箱即用",
+        "groupId": "com.itgrail.grail",
+        "display": "Grail  Swagger",
+        "optional": false
+      },
+      {
+        "artifactId": "grail-boot-starter-test",
+        "classify": "Test",
+        "desc": "Grail  Test对spring boot test封装定制",
+        "groupId": "com.itgrail.grail",
+        "display": "Grail  Test",
+        "scope": "test",
+        "optional": false
+      },
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "desc": "projectlombok",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "display": "lombok",
+        "scope":"provided",
+        "version": "1.18.8"
+      },{
+        "artifactId": "grail-cloud-starter-eureka",
+        "classify": "注册中心",
+        "desc": "Grail  Eureka对Eureka,Ribbon进行定制扩展",
+        "display": "Grail  Eureka",
+        "groupId": "com.itgrail.grail",
+        "optional": true
+      },
+      {
+        "artifactId": "lombok",
+        "classify": "Tools",
+        "desc": "projectlombok",
+        "groupId": "org.projectlombok",
+        "optional": false,
+        "display": "lombok",
+        "scope":"provided",
+        "version": "1.18.8"
+      },
+      {
+        "artifactId": "grail-cloud-starter-nacos",
+        "classify": "注册中心",
+        "desc": "Grail  Nacos对Spring Cloud Alibaba中的Nacos进行扩展封装",
+        "display": "Grail  Nacos",
+        "groupId": "com.itgrail.grail",
+        "optional": true
+      }
+    ],
+    "modulekey": "parent"
+  }
+]
