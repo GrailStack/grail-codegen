@@ -22,17 +22,17 @@
 </#if>
 
 server:
-  port: 8080
+port: 8080
 
 grail:
-  swagger:
-    enabled: true
-    api:
-      title: ${project.artifactId}
-      name: ${project.artifactId}
-      description: ${project.description!project.artifactId}
-      version: 1.0.0
-      contactName: xx.xx
-      contactEmail: xx.xx@itxh.net
+swagger:
+enabled: true
+api:
+title: ${project.artifactId}
+name: ${project.artifactId}
+description: ${project.description!project.artifactId}
+version: 1.0.0
+contactName: xx.xx
+contactEmail: xx.xx@itxh.net
 
 

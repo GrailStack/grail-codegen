@@ -114,14 +114,7 @@
         "groupId": "com.itgrail.grail",
         "optional": true
       },
-      {
-        "artifactId": "grail-cloud-starter-eureka",
-        "classify": "注册中心",
-        "desc": "Grail  Eureka对Eureka,Ribbon进行定制扩展",
-        "display": "Grail  Eureka",
-        "groupId": "com.itgrail.grail",
-        "optional": true
-      },
+
       {
         "artifactId": "lombok",
         "classify": "Tools",
