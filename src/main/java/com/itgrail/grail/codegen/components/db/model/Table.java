@@ -27,6 +27,11 @@ public class Table {
      */
     private String daoName;
 
+    private String coName;
+    private String controllerName;
+    private String serviceName;
+    private String serviceImplName;
+
     /**
      * 表备注信息
      */

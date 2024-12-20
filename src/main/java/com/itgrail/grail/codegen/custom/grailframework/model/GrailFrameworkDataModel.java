@@ -1,5 +1,6 @@
 package com.itgrail.grail.codegen.custom.grailframework.model;
 
+import com.itgrail.grail.codegen.components.db.CurdDataModel;
 import com.itgrail.grail.codegen.components.db.DbDataModel;
 import com.itgrail.grail.codegen.template.datamodel.CodeGenDataModel;
 import lombok.Data;
@@ -15,6 +16,8 @@ public class GrailFrameworkDataModel extends CodeGenDataModel {
     private String grailFrameworkVersion;
 
     private DbDataModel db;
+
+    private CurdDataModel curd;
 
     private DomainDataModel domain;
 }

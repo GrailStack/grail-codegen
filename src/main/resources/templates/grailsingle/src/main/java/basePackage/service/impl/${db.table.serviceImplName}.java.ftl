@@ -24,7 +24,7 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class ProductServiceImpl implements ProductService {
+public class ${db.table.serviceImplName} implements ${db.table.serviceName} {
 
     @Autowired
     private ProductMapper productMapper;

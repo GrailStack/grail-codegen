@@ -28,6 +28,10 @@ public class DbComponentPlugin implements ComponentPlugin {
 
     private static final String doFile = "${db.table.doName}.java.ftl";
     private static final String daoFile = "${db.table.daoName}.java.ftl";
+    private static final String coFile = "${db.table.coName}.java.ftl";
+    private static final String controllerFile = "${db.table.controllerName}.java.ftl";
+    private static final String serviceFile = "${db.table.serviceName}.java.ftl";
+    private static final String serviceImplFile = "${db.table.serviceImplName}.java.ftl";
 
     @Override
     public boolean canHandleDir(Resource dir, CodeGenDataModel model) {
@@ -60,8 +64,24 @@ public class DbComponentPlugin implements ComponentPlugin {
                     FileUtil.writeToFile(result, new File(toDir, table.getDoName() + ".java"));
                 } else if (isDaoTemplate(file)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getDaoName() + ".java"));
+                } else if (isTypeTemplate(file, coFile)) {
+                    FileUtil.writeToFile(result, new File(toDir, table.getCoName() + ".java"));
+                } else if (isTypeTemplate(file, controllerFile)) {
+                    FileUtil.writeToFile(result, new File(toDir, table.getControllerName() + ".java"));
+                } else if (isTypeTemplate(file, serviceFile)) {
+                    FileUtil.writeToFile(result, new File(toDir, table.getServiceName() + ".java"));
+                } else if (isTypeTemplate(file, serviceImplFile)) {
+                    FileUtil.writeToFile(result, new File(toDir, table.getServiceImplName() + ".java"));
                 }
             }
+        }
+    }
+
+    protected boolean isTypeTemplate(Resource file, String type) {
+        try {
+            return type.equalsIgnoreCase(ResourceUtil.getResourceName(file));
+        } catch (Exception ex) {
+            return false;
         }
     }
 

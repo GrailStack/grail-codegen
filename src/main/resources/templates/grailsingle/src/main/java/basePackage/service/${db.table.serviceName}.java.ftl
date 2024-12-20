@@ -8,7 +8,7 @@ import com.itgrail.grail.dto.PageResult;
 
 import java.util.List;
 
-public interface ProductService {
+public interface ${db.table.serviceName} {
 
     List<ProductCO> findByLikeName(String name);
 
