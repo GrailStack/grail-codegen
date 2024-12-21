@@ -1,8 +1,8 @@
 package ${project.basePackage}.service;
 
-import ${project.basePackage}.command.cmo.AddProductCmd;
-import ${project.basePackage}.command.cmo.PageListProductCmd;
-import ${project.basePackage}.command.cmo.UpdateProductCmd;
+import ${project.basePackage}.command.cmo.Add${db.table.name}Cmd;
+import ${project.basePackage}.command.cmo.PageList${db.table.name}Cmd;
+import ${project.basePackage}.command.cmo.Update${db.table.name}Cmd;
 import ${project.basePackage}.command.co.${db.table.coName};
 import com.itgrail.grail.dto.PageResult;
 
@@ -12,12 +12,12 @@ public interface ${db.table.serviceName} {
 
     List<${db.table.coName}> findByLikeName(String name);
 
-    void add(AddProductCmd addProductCmd);
+    void add(Add${db.table.name}Cmd add${db.table.name}Cmd);
 
-    void update(UpdateProductCmd updateProductCmd);
+    void update(Update${db.table.name}Cmd update${db.table.name}Cmd);
 
-    PageResult<${db.table.coName}> page(PageListProductCmd pageListProductCmd);
+    PageResult<${db.table.coName}> page(PageList${db.table.name}Cmd pageList${db.table.name}Cmd);
 
-    void delete(String uid);
+    void delete(String id);
 
 }

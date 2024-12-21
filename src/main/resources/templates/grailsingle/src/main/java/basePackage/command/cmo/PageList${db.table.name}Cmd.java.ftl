@@ -1,4 +1,4 @@
-package ${project.basePackage}.command.co;
+package ${project.basePackage}.command.cmo;
 
 <#assign _importList=[
 "lombok.Data",
@@ -27,8 +27,17 @@ package ${project.basePackage}.command.co;
     import ${importEle};
 </#list>
 
+/**
+ * @author xujin
+ *
+ */
 @Data
-public class ${db.table.coName} {
+public class PageList${db.table.name}Cmd {
+
+    private Integer currentPage = 1;
+
+    private Integer pageSize = 10;
+
 <#list db.table.columns as column>
     /**
     * ${column.comment!""}
@@ -36,4 +45,5 @@ public class ${db.table.coName} {
     private ${column.javaType} ${column.fieldName};
 
 </#list>
+
 }

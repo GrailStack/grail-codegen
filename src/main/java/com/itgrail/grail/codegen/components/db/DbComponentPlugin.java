@@ -1,6 +1,7 @@
 package com.itgrail.grail.codegen.components.db;
 
 import com.alibaba.fastjson.JSONObject;
+import com.itgrail.grail.codegen.components.db.common.DbModelConverter;
 import com.itgrail.grail.codegen.components.db.exceptions.DbException;
 import com.itgrail.grail.codegen.core.plugin.ComponentPlugin;
 import com.itgrail.grail.codegen.utils.FileUtil;
@@ -45,7 +46,7 @@ public class DbComponentPlugin implements ComponentPlugin {
 
     @Override
     public boolean canHandleFile(Resource file, CodeGenDataModel model) {
-        return isDaoTemplate(file) || isDoTemplate(file) || isTypeTemplate(file, coFile) || isTypeTemplate(file, controllerFile) || isTypeTemplate(file, serviceFile) || isTypeTemplate(file, serviceImplFile);
+        return isDaoTemplate(file) || isDoTemplate(file) || isTypeTemplate(file, coFile) || isTypeTemplate(file, controllerFile) || isTypeTemplate(file, serviceFile) || isTypeTemplate(file, serviceImplFile) || isCmdTemplate(file);
     }
 
     @Override
@@ -72,8 +73,18 @@ public class DbComponentPlugin implements ComponentPlugin {
                     FileUtil.writeToFile(result, new File(toDir, table.getServiceName() + ".java"));
                 }else if(isTypeTemplate(file, serviceImplFile)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getServiceImplName() + ".java"));
+                }else if(isCmdTemplate(file)) {
+                    FileUtil.writeToFile(result, new File(toDir, file.getFilename().replace("${db.table.name}", DbModelConverter.tableNameToCamelCase(table.getTableName())).replace(".ftl","")));
                 }
             }
+        }
+    }
+
+    protected boolean isCmdTemplate(Resource file) {
+        try {
+            return ResourceUtil.getResourceName(file).contains("${db.table.name}Cmd");
+        } catch (Exception ex) {
+            return false;
         }
     }
 

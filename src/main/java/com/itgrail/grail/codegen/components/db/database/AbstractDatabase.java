@@ -97,6 +97,7 @@ public abstract class AbstractDatabase implements Database {
             if (resultSet.next()) {
                 Table table = new Table();
                 table.setTableName(tableName);
+                table.setName(DbModelConverter.tableNameToCamelCase(tableName));
                 table.setDoName(DbModelConverter.tableNameToDoName(tableName));
                 table.setDaoName(DbModelConverter.tableNameToDaoName(tableName));
                 table.setCoName(DbModelConverter.tableNameToCoName(tableName));

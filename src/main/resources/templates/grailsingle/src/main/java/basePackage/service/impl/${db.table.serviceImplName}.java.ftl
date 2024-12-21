@@ -5,9 +5,9 @@ import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import ${project.basePackage}.service.${db.table.serviceName} ;
-import ${project.basePackage}.command.cmo.AddProductCmd ;
-import ${project.basePackage}.command.cmo.PageListProductCmd;
-import ${project.basePackage}.command.cmo.UpdateProductCmd;
+import ${project.basePackage}.command.cmo.Add${db.table.name}Cmd;
+import ${project.basePackage}.command.cmo.PageList${db.table.name}Cmd;
+import ${project.basePackage}.command.cmo.Update${db.table.name}Cmd;
 import ${project.basePackage}.command.co.${db.table.coName};
 import ${project.basePackage}.dataobject.${db.table.doName};
 import ${project.basePackage}.dao.${db.table.daoName};
@@ -39,14 +39,14 @@ public class ${db.table.serviceImplName} implements ${db.table.serviceName} {
     }
 
     @Override
-    public void add(AddProductCmd addProductCmd) {
-        ${db.table.doName} ${db.table.doName}=BeanMapper.map(addProductCmd,${db.table.doName}.class);
+    public void add(Add${db.table.name}Cmd add${db.table.name}Cmd) {
+        ${db.table.doName} ${db.table.doName}=BeanMapper.map(add${db.table.name}Cmd,${db.table.doName}.class);
         mapper.insert(${db.table.doName});
     }
 
     @Override
-    public void update(UpdateProductCmd updateProductCmd) {
-        ${db.table.doName} ${db.table.doName}= mapper.selectById(updateProductCmd.getUid());
+    public void update(Update${db.table.name}Cmd update${db.table.name}Cmd) {
+        ${db.table.doName} ${db.table.doName}= mapper.selectById(update${db.table.name}Cmd.getId());
         if(null==${db.table.doName}){
 //            throw new NoahException(ApiResponseCode.DATA_NOT_EXIST);
         }
@@ -56,7 +56,7 @@ public class ${db.table.serviceImplName} implements ${db.table.serviceName} {
     }
 
     @Override
-    public PageResult<${db.table.coName}> page(PageListProductCmd cmd) {
+    public PageResult<${db.table.coName}> page(PageList${db.table.name}Cmd cmd) {
         Page pageRequest = new Page(cmd.getCurrentPage(), cmd.getPageSize());
         LambdaQueryWrapper<${db.table.doName}> queryWrapper = new LambdaQueryWrapper<>();
         IPage<${db.table.doName}> page = mapper.selectPage(pageRequest, queryWrapper);

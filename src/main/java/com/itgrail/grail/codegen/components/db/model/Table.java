@@ -20,6 +20,11 @@ public class Table {
     /**
      * 数据对象名称
      */
+    private String name;
+
+    /**
+     * 数据对象名称
+     */
     private String doName;
 
     /**

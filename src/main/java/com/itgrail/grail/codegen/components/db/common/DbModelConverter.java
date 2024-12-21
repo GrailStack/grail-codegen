@@ -10,6 +10,15 @@ public class DbModelConverter {
         return CamelCaseFormat.getCamelCaseString(columnName, false);
     }
 
+    public static String tableNameToCamelCase(String tableName) {
+        String tableNameTmp = tableName;
+        if (tableNameTmp.startsWith("t_")) {
+            tableNameTmp = tableNameTmp.replaceFirst("t_", "");
+        }
+        tableNameTmp = CamelCaseFormat.getCamelCaseString(tableNameTmp, true);
+        return tableNameTmp;
+    }
+
     public static String tableNameToDoName(String tableName) {
         String tableNameTmp = tableName;
         if (tableNameTmp.startsWith("t_")) {

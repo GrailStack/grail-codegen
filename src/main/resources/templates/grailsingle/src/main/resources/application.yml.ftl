@@ -1,7 +1,7 @@
 <#if project.dbConfigure>
-  spring:
+spring:
   <#if (db.dbName)??>
-    datasource:
+  datasource:
     url: ${db.dbUrl}
     username: ${db.dbUserName}
     password: ${db.dbPassword}
@@ -10,7 +10,7 @@
     maximum-pool-size: 20
     minimum-idle: 10
   <#else>
-    datasource:
+  datasource:
     url: jdbc:mysql://localhost:3306/grail?useUnicode=true&autoReconnect=true&rewriteBatchedStatements=TRUE&characterEncoding=utf8
     username: root
     password: root
