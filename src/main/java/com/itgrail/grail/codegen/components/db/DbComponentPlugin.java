@@ -45,7 +45,7 @@ public class DbComponentPlugin implements ComponentPlugin {
 
     @Override
     public boolean canHandleFile(Resource file, CodeGenDataModel model) {
-        return isDaoTemplate(file) || isDoTemplate(file);
+        return isDaoTemplate(file) || isDoTemplate(file) || isTypeTemplate(file, coFile) || isTypeTemplate(file, controllerFile) || isTypeTemplate(file, serviceFile) || isTypeTemplate(file, serviceImplFile);
     }
 
     @Override
@@ -62,15 +62,15 @@ public class DbComponentPlugin implements ComponentPlugin {
             if (StringUtils.isNotBlank(result)) {
                 if (isDoTemplate(file)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getDoName() + ".java"));
-                } else if (isDaoTemplate(file)) {
+                } else if(isDaoTemplate(file)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getDaoName() + ".java"));
-                } else if (isTypeTemplate(file, coFile)) {
+                }else if(isTypeTemplate(file, coFile)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getCoName() + ".java"));
-                } else if (isTypeTemplate(file, controllerFile)) {
+                }else if(isTypeTemplate(file, controllerFile)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getControllerName() + ".java"));
-                } else if (isTypeTemplate(file, serviceFile)) {
+                }else if(isTypeTemplate(file, serviceFile)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getServiceName() + ".java"));
-                } else if (isTypeTemplate(file, serviceImplFile)) {
+                }else if(isTypeTemplate(file, serviceImplFile)) {
                     FileUtil.writeToFile(result, new File(toDir, table.getServiceImplName() + ".java"));
                 }
             }
