@@ -11,9 +11,9 @@ import com.itgrail.grail.annotation.domain.Domain;
  * @author Grail codegen
  */
 @SpringBootApplication
-@EnableEurekaClient
+<#--@EnableEurekaClient-->
 @Domain(code = "${(domain.code)!''}", parentCode = "${(domain.parentCode)!''}", name = "${(domain.name)!''}", desc = "${(domain.desc)!''}")
-@EnableFeignClients
+<#--@EnableFeignClients-->
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

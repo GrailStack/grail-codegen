@@ -20,12 +20,22 @@ public class Table {
     /**
      * 数据对象名称
      */
+    private String name;
+
+    /**
+     * 数据对象名称
+     */
     private String doName;
 
     /**
      * 数据访问对象名称
      */
     private String daoName;
+
+    private String coName;
+    private String controllerName;
+    private String serviceName;
+    private String serviceImplName;
 
     /**
      * 表备注信息

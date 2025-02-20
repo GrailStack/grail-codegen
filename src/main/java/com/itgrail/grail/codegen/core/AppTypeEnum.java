@@ -10,6 +10,7 @@ public enum AppTypeEnum {
     APP_TYPE_ZT("Grail DDD应用", "GrailFramework", "中台应用是基于Grail  Framework构建的中台应用，内置领域驱动(DDD),CQRS，应用内部流程编排，扩展点等常用功能。"),
 
     APP_TYPE_SINGLE("传统三层应用", "grailsingle", "传统应用基于Grail  Framework构建，用于创建工具型应用，查询服务，缓存服务，定时服务等，内置了Grail  Web，Grail  Mybatis，Grail  Swagger等功能。"),
+    APP_TYPE_LAYER("简单分层应用", "grailsimpleLayer", "传统应用基于Grail  Framework构建，用于创建工具型应用，查询服务，缓存服务，定时服务等，内置了Grail  Web，Grail  Mybatis，Grail  Swagger等功能。"),
 
     APP_TYPE_DDD("Grail DDD简化应用", "grailDdd", "简化版的ddd应用");
 

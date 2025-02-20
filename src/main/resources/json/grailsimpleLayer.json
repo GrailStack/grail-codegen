@@ -20,12 +20,12 @@
         "artifactId": "grail-cloud-starter-openfeign",
         "classify": "Cloud",
         "desc": "Grail基于Spring Cloud OpenFeign封装定制的OpenFeign",
-        "display": "Grail  OpenFeign",
+        "display": "Grail OpenFeign",
         "groupId": "com.itgrail.grail",
         "optional": false
       }
     ],
-    "modulekey": "client"
+    "modulekey": "api"
   },
   {
     "dependencyModels": [
@@ -47,14 +47,7 @@
         "scope":"provided",
         "version": "1.18.8"
       },
-      {
-        "artifactId": "grail-boot-starter-mybatis",
-        "classify": "DB",
-        "desc": "Grail  Mybatis对Mybatis,Mybatis Plus进行定制扩展",
-        "display": "Grail  Mybatis",
-        "groupId": "com.itgrail.grail",
-        "optional": true
-      },
+
       {
         "artifactId": "grail-boot-starter-swagger",
         "classify": "Tools",
@@ -70,12 +63,7 @@
         "display": "Grail  Mybatis",
         "groupId": "com.itgrail.grail",
         "optional": true
-      }
-    ],
-    "modulekey": "core"
-  },
-  {
-    "dependencyModels": [
+      },
       {
         "artifactId": "grail-cloud-starter-nacos",
         "classify": "注册中心",
@@ -84,7 +72,6 @@
         "groupId": "com.itgrail.grail",
         "optional": true
       },
-
       {
         "artifactId": "lombok",
         "classify": "Tools",
@@ -96,6 +83,6 @@
         "version": "1.18.8"
       }
     ],
-    "modulekey": "start"
+    "modulekey": "service"
   }
 ]

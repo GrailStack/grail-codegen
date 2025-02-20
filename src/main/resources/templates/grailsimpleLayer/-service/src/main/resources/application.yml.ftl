@@ -1,7 +1,7 @@
 <#if project.dbConfigure>
-spring:
+  spring:
   <#if (db.dbName)??>
-  datasource:
+    datasource:
     url: ${db.dbUrl}
     username: ${db.dbUserName}
     password: ${db.dbPassword}
@@ -10,7 +10,7 @@ spring:
     maximum-pool-size: 20
     minimum-idle: 10
   <#else>
-  datasource:
+    datasource:
     url: jdbc:mysql://localhost:3306/grail?useUnicode=true&autoReconnect=true&rewriteBatchedStatements=TRUE&characterEncoding=utf8
     username: root
     password: root
@@ -22,17 +22,17 @@ spring:
 </#if>
 
 server:
-  port: 8080
+port: 8080
 
 grail:
-  swagger:
-    enabled: true
-    api:
-      title: ${project.artifactId}
-      name: ${project.artifactId}
-      description: ${project.description!project.artifactId}
-      version: 1.0.0
-      contactName: xx.xx
-      contactEmail: xx.xx@itxh.net
+swagger:
+enabled: true
+api:
+title: ${project.artifactId}
+name: ${project.artifactId}
+description: ${project.description!project.artifactId}
+version: 1.0.0
+contactName: xx.xx
+contactEmail: xx.xx@itxh.net
 
 

@@ -10,6 +10,15 @@ public class DbModelConverter {
         return CamelCaseFormat.getCamelCaseString(columnName, false);
     }
 
+    public static String tableNameToCamelCase(String tableName) {
+        String tableNameTmp = tableName;
+        if (tableNameTmp.startsWith("t_")) {
+            tableNameTmp = tableNameTmp.replaceFirst("t_", "");
+        }
+        tableNameTmp = CamelCaseFormat.getCamelCaseString(tableNameTmp, true);
+        return tableNameTmp;
+    }
+
     public static String tableNameToDoName(String tableName) {
         String tableNameTmp = tableName;
         if (tableNameTmp.startsWith("t_")) {
@@ -26,6 +35,42 @@ public class DbModelConverter {
         }
         tableNameTmp = CamelCaseFormat.getCamelCaseString(tableNameTmp, true);
         return tableNameTmp + "Mapper";
+    }
+
+    public static String tableNameToControllerName(String tableName) {
+        String tableNameTmp = tableName;
+        if (tableNameTmp.startsWith("t_")) {
+            tableNameTmp = tableNameTmp.replaceFirst("t_", "");
+        }
+        tableNameTmp = CamelCaseFormat.getCamelCaseString(tableNameTmp, true);
+        return tableNameTmp + "Controller";
+    }
+
+    public static String tableNameToServiceName(String tableName) {
+        String tableNameTmp = tableName;
+        if (tableNameTmp.startsWith("t_")) {
+            tableNameTmp = tableNameTmp.replaceFirst("t_", "");
+        }
+        tableNameTmp = CamelCaseFormat.getCamelCaseString(tableNameTmp, true);
+        return tableNameTmp + "Service";
+    }
+
+    public static String tableNameToServiceImplName(String tableName) {
+        String tableNameTmp = tableName;
+        if (tableNameTmp.startsWith("t_")) {
+            tableNameTmp = tableNameTmp.replaceFirst("t_", "");
+        }
+        tableNameTmp = CamelCaseFormat.getCamelCaseString(tableNameTmp, true);
+        return tableNameTmp + "ServiceImpl";
+    }
+
+    public static String tableNameToCoName(String tableName) {
+        String tableNameTmp = tableName;
+        if (tableNameTmp.startsWith("t_")) {
+            tableNameTmp = tableNameTmp.replaceFirst("t_", "");
+        }
+        tableNameTmp = CamelCaseFormat.getCamelCaseString(tableNameTmp, true);
+        return tableNameTmp + "CO";
     }
 
 }
